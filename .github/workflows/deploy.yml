@@ -30,4 +30,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: fratto
           directory: dist
-          productionBranch: master
+          branch: master
