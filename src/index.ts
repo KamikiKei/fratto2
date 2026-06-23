@@ -1,5 +1,5 @@
 export default {
-  async fetch(request: Request, env: any, ctx: ExecutionContext) {
+  async fetch(request, env) {
     const url = new URL(request.url);
     let pathname = url.pathname === '/' ? '/index.html' : url.pathname;
 
@@ -24,4 +24,4 @@ export default {
       );
     }
   },
-} as ExportedHandler;
+};
