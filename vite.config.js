@@ -1,14 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // 💡 ここを追加！ビルド後のアセット（JS/CSS）を相対パスで読み込むようにします
+  // 💡 Cloudflare環境やどこでも動くように相対パスにする設定
   base: './', 
   resolve: {
     alias: {
       '@': '/src',
     },
   },
-})
+});

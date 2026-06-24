@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./src/*"]
     },
@@ -17,6 +16,6 @@
     "resolveJsonModule": true,
     "types": []
   },
-  "include": ["src/components/**/*.{js,jsx}", "src/pages/**/*.jsx", "src/Layout.jsx", "src/types/**/*.d.ts"],
-  "exclude": ["node_modules", "dist", "src/vite-plugins", "src/api", "src/lib"]
-} 
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
