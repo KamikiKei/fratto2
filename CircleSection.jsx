@@ -3,10 +3,6 @@ import { motion } from "framer-motion";
 import { PenTool, FileText, ImageIcon, ExternalLink, Download } from "lucide-react";
 import guidelinesPdf from "@/assets/guidelines.pdf";
 import timelineImg from "@/assets/timeline.png";
-import mapImg from "@/assets/map.png";
-import shootMapImg from "@/assets/shoot_map.png";
-import spaceImg from "@/assets/space.png";
-import circleCutTemplate from "@/assets/circle_cut.png";
 
 const APPLY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeFpoobAjtVrELwJltq94MqN5QaP20SoWsIwn57hLo9jdNwQw/viewform?usp=dialog";
 const CIRCLE_CUT_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd1JBFBPV5XvWSUXjwkCI8Yyw9HS2NvQN8jv16Dh4YsEY84TA/viewform";
@@ -83,7 +79,7 @@ export default function CircleSection() {
             </h3>
             <div className="space-y-4">
               <InfoRow label="募集スペース数" value="51スペース" />
-              <div className="pt-2 flex flex-col gap-2">
+              <div className="pt-2">
                 <a
                   href={guidelinesPdf}
                   target="_blank"
@@ -93,14 +89,6 @@ export default function CircleSection() {
                   <Download size={16} />
                   募集要項PDFをダウンロード
                 </a>
-                <a
-                  href={circleCutTemplate}
-                  download
-                  className="inline-flex items-center gap-2 bg-flatto-blue hover:bg-flatto-blue-dark text-white font-heading font-bold px-5 py-2.5 rounded-full text-sm hover:scale-105 active:scale-95 transition-all shadow-sm"
-                >
-                  <Download size={16} />
-                  サークルカットテンプレート
-                </a>
               </div>
               <InfoRow label="参加費" value="1スペース：一般 2,000円 ／ 学割 1,200円　2スペース：一般 4,000円 ／ 学割 2,400円（学割は全員の学生証提示が必要。当日現金払いのみ）" />
               <InfoRow
@@ -108,9 +96,6 @@ export default function CircleSection() {
                 value="山大生以外もOK！オリジナル・二次創作作品（全年齢向け）を頒布するサークル。直接参加のみ（委託不可）。16歳未満の方は成人の方と一緒に参加。"
               />
               <InfoRow label="貸出備品" value="1スペース：長机の半分（90×45cm）＋イス1脚　2スペース：長机1台（180×45cm）＋イス2脚" />
-              <div className="pt-3">
-                <img src={spaceImg} alt="スペース仕様図" className="w-full rounded-lg border border-flatto-green/20" />
-              </div>
             </div>
           </motion.div>
 
@@ -156,22 +141,31 @@ export default function CircleSection() {
           </motion.div>
         </div>
 
-        {/* Venue Map */}
+        {/* Circle Cut Spec */}
         <motion.div
           {...fadeUp}
-          className="mt-6 bg-white rounded-3xl border-2 border-flatto-green/30 p-6 md:p-7"
+          className="mt-6 bg-white rounded-3xl border-2 border-dashed border-flatto-green/30 p-6 md:p-7"
         >
           <h3 className="font-heading font-bold text-xl text-flatto-text mb-4 flex items-center gap-2">
-            🗺️ 会場マップ
+            🖼️ サークルカット規定
           </h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <img src={mapImg} alt="会場マップ" className="w-full rounded-2xl" />
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="bg-flatto-cream rounded-2xl p-4 text-center">
+              <p className="text-xs text-flatto-text-light font-heading mb-1">画像サイズ</p>
+              <p className="font-heading font-bold text-flatto-text">635 × 903 px</p>
             </div>
-            <div>
-              <img src={shootMapImg} alt="撮影エリアマップ" className="w-full rounded-2xl" />
+            <div className="bg-flatto-cream rounded-2xl p-4 text-center">
+              <p className="text-xs text-flatto-text-light font-heading mb-1">ファイル形式</p>
+              <p className="font-heading font-bold text-flatto-text">PNG / JPG</p>
+            </div>
+            <div className="bg-flatto-cream rounded-2xl p-4 text-center">
+              <p className="text-xs text-flatto-text-light font-heading mb-1">カラーモード</p>
+              <p className="font-heading font-bold text-flatto-text">RGB</p>
             </div>
           </div>
+          <p className="text-xs text-flatto-text-light mt-3">
+            ※サークルカット提出フォームよりご提出ください。
+          </p>
         </motion.div>
       </div>
     </section>

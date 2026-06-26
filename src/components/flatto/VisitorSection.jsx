@@ -124,24 +124,7 @@ export default function VisitorSection() {
           </p>
         </motion.div>
 
-        {/* Catalog Download */}
-        <motion.div {...fadeUp} className="text-center">
-          <h3 className="font-heading font-bold text-lg text-flatto-text mb-3">
-            📖 サークルカタログ（配置図）
-          </h3>
-          <p className="text-sm text-flatto-text-light mb-4">
-            出展者一覧や会場マップを事前にチェック！
-          </p>
-          <a
-            href="/catalog.pdf"
-            download="ふらっとカタログ.pdf"
-            className="inline-flex items-center gap-2 bg-flatto-blue hover:bg-flatto-blue-dark text-flatto-text font-heading font-bold px-7 py-3.5 rounded-full text-base shadow-md hover:scale-105 active:scale-95 transition-all"
-          >
-            <Download size={20} />
-            カタログをダウンロード
-          </a>
-        
-        </motion.div>
+
       </div>
     </section>
   );

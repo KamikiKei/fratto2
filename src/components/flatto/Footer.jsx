@@ -37,7 +37,12 @@ export default function Footer() {
             <a href="#contact" className="text-white/60 hover:text-white text-sm font-heading transition-colors">お問い合わせ</a>
           </nav>
 
-          <p className="text-white/40 text-xs font-heading">
+          <p className="text-white/60 text-sm font-heading mt-3">
+            お問い合わせメール：
+            <a href="mailto:flat.yamagata.vr@gmail.com" className="underline hover:text-white/90">flat.yamagata.vr@gmail.com</a>
+          </p>
+
+          <p className="text-white/40 text-xs font-heading mt-3">
             © 2026 山形同人即売会「ふらっと！」実行委員会
           </p>
         </div>

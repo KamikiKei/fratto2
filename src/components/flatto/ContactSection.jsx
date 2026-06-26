@@ -33,7 +33,13 @@ export default function ContactSection() {
             <p className="text-sm text-flatto-text-light mb-6 leading-relaxed">
               イベントに関するご質問やご意見は、<br className="hidden sm:inline" />
               下のボタンからお問い合わせフォームにてお送りください。<br className="hidden sm:inline" />
-              運営チームが確認次第、ご返信いたします！
+              またはメールでも受け付けています。
+            </p>
+            <p className="text-sm text-flatto-text-light mb-6 leading-relaxed">
+              お問い合わせメール：
+              <a href="mailto:flat.yamagata.vr@gmail.com" className="text-flatto-green-dark underline hover:text-flatto-green">
+                flat.yamagata.vr@gmail.com
+              </a>
             </p>
             <a
               href={CONTACT_URL}
