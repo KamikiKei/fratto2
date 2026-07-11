@@ -82,7 +82,7 @@ export default function HeroSection() {
             </div>
             <div className="text-left">
               <p className="text-xs text-flatto-text-light font-heading">開催日時</p>
-              <p className="font-heading font-bold text-flatto-text">2026年9月13日（土）</p>
+              <p className="font-heading font-bold text-flatto-text">2026年9月13日（日）</p>
             </div>
           </div>
           <div className="bg-white rounded-2xl shadow-lg border-2 border-flatto-blue/40 px-6 py-4 flex items-center gap-3">
@@ -127,7 +127,7 @@ export default function HeroSection() {
           className="flex items-center justify-center gap-4"
         >
           <a
-            href="https://x.com/vr_yamagata"
+            href="https://x.com/flat_yamagata"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-flatto-text text-white px-5 py-3 rounded-full font-heading font-medium text-sm hover:scale-105 active:scale-95 transition-transform shadow-md"
@@ -136,7 +136,7 @@ export default function HeroSection() {
             X (旧Twitter)
           </a>
           <a
-            href="https://www.instagram.com/yamagata_vr/"
+            href="https://www.instagram.com/flat.yamagata?igsh=MWxxdG1odW8zMTRuaA%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-5 py-3 rounded-full font-heading font-medium text-sm hover:scale-105 active:scale-95 transition-transform shadow-md"

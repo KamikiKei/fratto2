@@ -1,16 +1,15 @@
 import React from "react";
 import { Twitter, Instagram } from "lucide-react";
-import footerLogo from "../../assets/footer-logo.png";
+import footerLogo from "@/assets/footer-logo.png";
 export default function Footer() {
   return (
     <footer className="bg-flatto-text py-10">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-col items-center gap-5">
           <img src={footerLogo} alt="ふらっと！" className="h-16 w-auto opacity-90" />
-
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <a
-              href="https://x.com/vr_yamagata"
+              href="https://x.com/flat_yamagata"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
@@ -19,7 +18,7 @@ export default function Footer() {
               <Twitter size={18} className="text-white" />
             </a>
             <a
-              href="https://www.instagram.com/yamagata_vr/"
+              href="https://www.instagram.com/flat.yamagata?igsh=MWxxdG1odW8zMTRuaA%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
