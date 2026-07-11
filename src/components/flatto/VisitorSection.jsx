@@ -82,7 +82,7 @@ export default function VisitorSection() {
               </div>
               <div>
                 <p className="text-xs text-flatto-text-light font-heading mb-0.5">日時</p>
-                <p className="font-heading font-bold text-flatto-text text-sm">2026年9月13日（土）</p>
+                <p className="font-heading font-bold text-flatto-text text-sm">2026年9月13日（日）</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

@@ -10,6 +10,7 @@ import circleCutTemplate from "@/assets/circle_cut.png";
 
 const APPLY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeFpoobAjtVrELwJltq94MqN5QaP20SoWsIwn57hLo9jdNwQw/viewform?usp=dialog";
 const CIRCLE_CUT_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd1JBFBPV5XvWSUXjwkCI8Yyw9HS2NvQN8jv16Dh4YsEY84TA/viewform";
+const COSPLAY_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfqErCVg3J1ZSB6Afzaxt4Po-ovhk74oTtIQ3iZS21jvHb3yQ/viewform?usp=dialog";
 
 const fadeUp = {
   initial: { y: 30, opacity: 0 },
@@ -97,7 +98,7 @@ export default function CircleSection() {
               <InfoRow label="参加費" value="1スペース：一般 2,000円 ／ 学割 1,200円　2スペース：一般 4,000円 ／ 学割 2,400円（学割は全員の学生証提示が必要。当日現金払いのみ）" />
               <InfoRow
                 label="参加資格"
-                value="山大生以外もOK！オリジナル・二次創作作品（全年齢向け）を頒布するサークル。直接参加のみ（委託不可）。16歳未満の方は成人の方と一緒に参加。"
+                value="山大生以外もOK！オリジナル・二次創作作品（全年齢向け）を頒布するサークル。直接参加のみ（本部での委託販売は実施しません）。16歳未満の方は成人の方と一緒に参加。"
               />
               <InfoRow label="貸出備品" value="1スペース：長机の半分（90×45cm）＋イス1脚　2スペース：長机1台（180×45cm）＋イス2脚" />
               <div className="pt-3">
@@ -130,6 +131,18 @@ export default function CircleSection() {
                 </ul>
               </div>
               <div>
+                <h4 className="font-heading font-bold text-sm text-flatto-text mb-1">奥付の掲載について（お願い）</h4>
+                <p className="text-sm text-flatto-text-light leading-relaxed">
+                  同人誌を頒布される場合は、トラブル時の連絡先確認のため、奥付の掲載にご協力ください。
+                </p>
+              </div>
+              <div>
+                <h4 className="font-heading font-bold text-sm text-flatto-text mb-1">委託頒布について</h4>
+                <p className="text-sm text-flatto-text-light leading-relaxed">
+                  本部での委託販売は行いません。サークル間で合意がある場合のスペース内での委託は可能です。無断で他者作品を頒布する行為はお控えください。
+                </p>
+              </div>
+              <div>
                 <h4 className="font-heading font-bold text-sm text-flatto-text mb-1">撮影・音響ルール</h4>
                 <ul className="text-sm text-flatto-text-light leading-relaxed space-y-0.5 list-disc list-inside">
                   <li>即売会中（11:00〜15:00）：会場内は写真・動画ともに撮影不可</li>
@@ -147,6 +160,28 @@ export default function CircleSection() {
             </div>
           </motion.div>
         </div>
+        <motion.div
+          {...fadeUp}
+          className="mt-6 bg-white rounded-3xl border-2 border-flatto-blue/25 p-6 md:p-7"
+        >
+          <h3 className="font-heading font-bold text-xl text-flatto-text mb-3 flex items-center gap-2">
+            👗 コスプレ参加について
+          </h3>
+          <p className="text-sm md:text-base text-flatto-text-light leading-relaxed mb-4">
+            コスプレ参加予定の方は、下記フォームより事前回答をお願いします。
+          </p>
+          <a
+            href={COSPLAY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-flatto-blue hover:bg-flatto-blue-dark text-white font-heading font-bold px-6 py-3 rounded-full text-sm md:text-base shadow-sm hover:scale-105 active:scale-95 transition-all"
+          >
+            <FileText size={18} />
+            コスプレ参加回答フォーム
+            <ExternalLink size={16} className="opacity-80" />
+          </a>
+        </motion.div>
+
         {/* Circle Cut Spec (inserted above Venue Map) */}
         <motion.div
           {...fadeUp}
