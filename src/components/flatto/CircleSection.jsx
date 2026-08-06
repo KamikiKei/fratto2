@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { PenTool, FileText, ImageIcon, ExternalLink, Download } from "lucide-react";
 import guidelinesPdf from "@/assets/guidelines.pdf";
+import circleIntroPdf from "@/assets/circle_intro.pdf";
 import timelineImg from "@/assets/timeline.png";
 import mapImg from "@/assets/map.png";
 import shootMapImg from "@/assets/shoot_map.png";
@@ -46,7 +47,7 @@ export default function CircleSection() {
         {/* CTA Buttons - Most prominent */}
         <motion.div
           {...fadeUp}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-14"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
         >
           <a
             href={APPLY_URL}
@@ -68,6 +69,57 @@ export default function CircleSection() {
             サークルカットを提出する
             <ExternalLink size={16} className="opacity-50" />
           </a>
+        </motion.div>
+
+        <motion.div
+          {...fadeUp}
+          className="mb-12 rounded-[2rem] border border-flatto-orange/20 bg-white p-6 shadow-sm md:p-8"
+        >
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+            <div className="flex-1">
+              <p className="mb-2 font-heading text-sm font-bold uppercase tracking-[0.2em] text-flatto-orange">
+                Circle Introduction
+              </p>
+              <h3 className="font-heading text-2xl font-black text-flatto-text">
+                サークル紹介資料をチェックしよう
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-flatto-text-light">
+                当日の雰囲気や出展の魅力をわかりやすくまとめたPDFです。サークル参加を検討している方は、まずこちらを見て概要を把握してください。
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a
+                  href={circleIntroPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-flatto-green px-5 py-2.5 font-heading font-bold text-sm text-flatto-text transition-all hover:scale-105 hover:bg-flatto-green-dark"
+                >
+                  <FileText size={16} />
+                  PDFを開く
+                  <ExternalLink size={14} className="opacity-70" />
+                </a>
+                <a
+                  href={circleIntroPdf}
+                  download
+                  className="inline-flex items-center gap-2 rounded-full border border-flatto-green/30 bg-flatto-cream px-5 py-2.5 font-heading font-bold text-sm text-flatto-text transition-all hover:scale-105"
+                >
+                  <Download size={16} />
+                  ダウンロード
+                </a>
+              </div>
+            </div>
+            <div className="w-full lg:w-[420px]">
+              <object
+                data={circleIntroPdf}
+                type="application/pdf"
+                className="h-[320px] w-full rounded-2xl border border-flatto-green/20 bg-slate-50"
+                aria-label="サークル紹介PDF"
+              >
+                <div className="flex h-full items-center justify-center rounded-2xl border border-dashed border-flatto-green/30 bg-flatto-cream/70 p-4 text-center text-sm text-flatto-text-light">
+                  PDFプレビューを表示できませんでした。上のボタンから開いてください。
+                </div>
+              </object>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
